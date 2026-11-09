@@ -1,0 +1,7 @@
+# 组合包层：安装进 profile 后，本文件在 profile 启动时被应用。
+# 行按包名引用本包，Node 模块解析才能找到已安装的代码。
+# host 半负责「高亮标记」的存取端点（端口 3205，只监听回环），
+# client 半负责会话界面上的选中标色 / 色块绘制 / 单独删除。
+- insert:
+    - id: dsh-highlight
+      name: dsh-highlight-plugin

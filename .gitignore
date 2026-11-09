@@ -1,0 +1,4 @@
+node_modules/
+*.tgz
+host-boot.log
+.DS_Store

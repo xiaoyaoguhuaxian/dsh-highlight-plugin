@@ -1,0 +1,35 @@
+{
+  "name": "dsh-highlight-plugin",
+  "version": "1.2.8",
+  "description": "会话内划重点：在 DSH 会话界面上选中任意语句，一键标成高亮色块（黄/绿/蓝）；同句重标=替换不叠色；端点支持元素容器（加粗/标题/段首起拖也能标）；色块用独立覆盖层绘制（不碰框架 React 管的 DOM，重渲染冲不掉）；点色块弹删除确认，叠在一起的多条可一键全删；标记按会话存盘（~/.dsh/highlights/<会话id>.json），会话持续期间一直在，跨重启也在，直到手动删除",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "smoke.mjs",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "smoke": "node smoke.mjs"
+  },
+  "license": "MIT"
+}
