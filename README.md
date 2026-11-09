@@ -34,3 +34,7 @@ DSH 的插件市场（Settings → Plugins → Market）搜 `dsh-highlight`，�
 dsh plugin add github:xiaoyaoguhuaxian/dsh-highlight-plugin
 ```
 
+### 卸载
+
+从 profile 的 `dsh.profile.bundles` 里移除 `"dsh-highlight-plugin"` 即可；市场里装的直接在 Settings → Plugins 里禁用/卸载。改客户端代码要重启宿主（bundle 是启动时快照的）。
+
